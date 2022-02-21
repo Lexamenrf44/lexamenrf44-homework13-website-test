@@ -10,14 +10,11 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-
 @Tag("with telegram notifications")
 public class RegardTest extends BrowserSetup {
 
     @DisplayName("Тестирование формы поиска")
     @Test
-    @Order(1)
     void regardSearchingFormTest() {
 
         step("Перейти на веб-сайт Regard", () -> {
@@ -39,7 +36,6 @@ public class RegardTest extends BrowserSetup {
 
     @DisplayName("Тестирование результатов поиска")
     @Test
-    @Order(2)
     void regardSearchResultsTest() {
 
         step("Проверка отображение результатов поиска", () -> {
