@@ -30,14 +30,18 @@ dependencies {
     implementation 'com.github.javafaker:javafaker:1.0.2'
 
     testImplementation(
-            "com.codeborne:selenide:6.2.1",
+            'com.codeborne:selenide:6.3.0',
             "io.qameta.allure:allure-selenide:$allureVersion",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion"
     )
     testRuntimeOnly(
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion",
-            'org.slf4j:slf4j-simple:1.7.33'
+            'org.slf4j:slf4j-simple:1.7.36'
     )
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
 
 tasks.withType(Test) {
@@ -50,6 +54,12 @@ tasks.withType(Test) {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
+    }
+}
+
+task properties_tests(type: Test) {
+    useJUnitPlatform{
+        includeTags "properties"
     }
 }
 

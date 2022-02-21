@@ -19,7 +19,10 @@ public class BrowserSetup {
 
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "91");
-        Configuration.browserSize = System.getProperty("browserSize", "1280x1024");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+        Configuration.holdBrowserOpen = true;
+
+        /*
 
         String remoteUrl = System.getProperty("remoteUrl");
         String user = System.getProperty("user");
@@ -31,6 +34,7 @@ public class BrowserSetup {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
 
+         */
     }
 
     @AfterEach
