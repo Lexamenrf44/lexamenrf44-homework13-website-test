@@ -29,7 +29,7 @@ public class OzonTest extends BrowserSetup {
         step("Проверка отображение результатов поиска", () ->
                 $(byText("Мыши")).shouldBe(visible));
     }
-
+/*
     @Test
     @DisplayName("Тестирование отображение первого товара на Ozon")
     void ozonGoodsFormTest() {
@@ -48,7 +48,7 @@ public class OzonTest extends BrowserSetup {
         step("Переход на первую строку результата поиска Ozon", () ->
                 $(".hq .f-tsBodyL").click());
     }
-
+*/
     @Test
     @DisplayName("Тестирование формы Ozon Express")
     void ozonExpressLinkTest() {
