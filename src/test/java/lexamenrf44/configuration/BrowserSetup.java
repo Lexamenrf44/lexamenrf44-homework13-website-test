@@ -23,12 +23,10 @@ public class BrowserSetup {
         Configuration.browserVersion = System.getProperty("browserVersion", "91");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
 
-        /*
         String remoteUrl = System.getProperty("remoteUrl");
         String user = System.getProperty("user");
         String password = System.getProperty("password");
         Configuration.remote = "https://" + user + ":" + password + "@" + remoteUrl;
-         */
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
