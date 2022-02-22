@@ -56,15 +56,3 @@ tasks.withType(Test) {
         }
     }
 }
-
-task properties_tests(type: Test) {
-    useJUnitPlatform{
-        includeTags "properties"
-    }
-}
-
-task notifications_tests(type: Test) {
-    useJUnitPlatform{
-        includeTags "with telegram notifications"
-    }
-}
