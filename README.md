@@ -41,3 +41,38 @@
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 </p>
+
+ В данном проекте автотесты написаны на <code>Java</code> с использованием <code>Selenide</code> для UI-тестов.
+>
+> <code>Selenoid</code> выполняет запуск браузеров в контейнерах <code>Docker</code>.
+>
+> <code>Allure Report</code> формирует отчет о запуске тестов.
+>
+> Для автоматизированной сборки проекта используется <code>Gradle</code>.
+>
+> В качестве библиотеки для модульного тестирования используется <code>JUnit 5</code>.
+>
+> <code>Jenkins</code> выполняет запуск тестов.
+> После завершения прогона отправляются уведомления с помощью бота в <code>Telegram</code>.
+
+
+## Запуск тестов из терминала
+
+### :robot: Локальный запуск тестов
+
+```
+gradle clean test
+```
+
+### :robot: Удаленный запуск тестов 
+
+```
+clean
+test
+-DremoteUrl=${REMOTEURL}
+-Duser=${USER}
+-Dpassword=${PASSWORD}
+-Dbrowser=${BROWSER}
+-DbrowserVersion=${VERSION}
+-DbrowserSize=${RESOLUTION}
+```
