@@ -76,3 +76,47 @@ test
 -DbrowserVersion=${VERSION}
 -DbrowserSize=${RESOLUTION}
 ```
+### :robot: Параметры сборки
+
+> <code>REMOTE_URL</code> – адрес удаленного сервера, на котором будут запускаться тесты.
+>
+> <code>BROWSER</code> – браузер, в котором будут выполняться тесты (_по умолчанию - <code>chrome</code>_).
+>
+> <code>BROWSER_VERSION</code> – версия браузера, в которой будут выполняться тесты (_по умолчанию - <code>91.0</code>_).
+>
+> <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты (_по умолчанию - <code>1920x1080</code>_).
+
+### :skier: Главная страница Allure-отчета
+
+<p align="center">
+<img title="Allure Overview" src="images/screens/allure_overview.png">
+</p>
+
+### :eye_speech_bubble: Группировка тестов по проверяемому функционалу
+
+<p align="center">
+<img title="Allure Behaviors" src="images/screens/allure_behavior.png">
+</p>
+
+
+### :frog: Основной дашборд
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screens/allure_graphs.png">
+</p>
+
+
+## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
+
+> После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне.
+
+<p align="center">
+<img title="Telegram Notifications" src="images/screens/telegram_bot_notification.png">
+</p>
+
+## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
+
+> К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
+<p align="center">
+  <img title="Selenoid Video" src="images/gifs/test_run_example.gif">
+</p>
