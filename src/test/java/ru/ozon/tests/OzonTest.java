@@ -1,19 +1,19 @@
-package lexamenrf44.tests;
+package ru.ozon.tests;
 
 import static io.qameta.allure.Allure.*;
 
-import lexamenrf44.configuration.BrowserSetup;
+import ru.ozon.configuration.TestBase;
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class OzonTest extends BrowserSetup {
+public class OzonTest extends TestBase {
 
     @Test
     @DisplayName("Тестирование формы поиска Ozon")
-    void ozonSearchFormTest() {
+    void searchFormTest() {
         step("Перейти на веб-сайт Ozon", () ->
             open(""));
 
@@ -29,10 +29,11 @@ public class OzonTest extends BrowserSetup {
         step("Проверка отображение результатов поиска", () ->
                 $(byText("Мыши")).shouldBe(visible));
     }
-/*
+
     @Test
+    @Disabled
     @DisplayName("Тестирование отображение первого товара на Ozon")
-    void ozonGoodsFormTest() {
+    void goodsFormTest() {
         step("Перейти на веб-сайт Ozon", () ->
                 open(""));
 
@@ -48,10 +49,10 @@ public class OzonTest extends BrowserSetup {
         step("Переход на первую строку результата поиска Ozon", () ->
                 $(".hq .f-tsBodyL").click());
     }
-*/
+
     @Test
     @DisplayName("Тестирование формы Ozon Express")
-    void ozonExpressLinkTest() {
+    void expressLinkTest() {
         step("Перейти на веб-сайт Ozon", () ->
                 open(""));
 
@@ -64,7 +65,7 @@ public class OzonTest extends BrowserSetup {
 
     @Test
     @DisplayName("Тестирование формы авторизации")
-    void ozonIDFrameTest() {
+    void idFrameTest() {
         step("Перейти на веб-сайт Ozon", () ->
                 open(""));
 
@@ -78,7 +79,7 @@ public class OzonTest extends BrowserSetup {
 
     @Test
     @DisplayName("Тестирование формы заказов")
-    void ozonOrderWindowTest() {
+    void orderWindowTest() {
         step("Перейти на веб-сайт Ozon", () ->
                 open(""));
 
@@ -91,7 +92,7 @@ public class OzonTest extends BrowserSetup {
 
     @Test
     @DisplayName("Тестирование формы избранного")
-    void ozonFeaturedWindowTest() {
+    void featuredWindowTest() {
         step("Перейти на веб-сайт Ozon", () ->
                 open(""));
 

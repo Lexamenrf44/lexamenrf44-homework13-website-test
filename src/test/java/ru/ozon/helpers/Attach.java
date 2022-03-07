@@ -1,4 +1,4 @@
-package lexamenrf44.helpers;
+package ru.ozon.helpers;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;

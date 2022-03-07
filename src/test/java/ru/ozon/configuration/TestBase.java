@@ -1,19 +1,19 @@
-package lexamenrf44.configuration;
+package ru.ozon.configuration;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
-import lexamenrf44.helpers.Attach;
+import ru.ozon.helpers.Attach;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-public class BrowserSetup {
+public class TestBase {
 
-    @BeforeEach
-    public void browserOpeningConfiguration() {
+    @BeforeAll
+    public static void browserOpeningConfiguration() {
 
         Configuration.baseUrl = "https://www.ozon.ru/";
 
@@ -23,10 +23,12 @@ public class BrowserSetup {
         Configuration.browserVersion = System.getProperty("browserVersion", "91");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
 
+        /*
         String remoteUrl = System.getProperty("remoteUrl");
         String user = System.getProperty("user");
         String password = System.getProperty("password");
         Configuration.remote = "https://" + user + ":" + password + "@" + remoteUrl;
+         */
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
